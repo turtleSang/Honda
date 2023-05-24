@@ -159,6 +159,47 @@
             cursor: pointer;
         }
     }
+    #vehicle-function {
+        padding: $mg-4 0;
+        background-color: $color-gray-2;
+        .intro-container {
+            width: 85%;
+            margin: 0 auto;
+            .function_item {
+                height: 350px;
+                box-shadow: 0px 5px 10px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                h3 {
+                    font-size: $fs-2;
+                    font-weight: bold;
+                    margin-bottom: $mg-2 - 5px;
+                    color: $color-dark-blue-200;
+                }
+                p {
+                    font-size: $fs-1;
+                    font-weight: 300;
+                    margin-bottom: $mg-2 - 5px;
+                    padding: 0 $pd-6;
+                    text-align: center;
+                    color: $color-dark-blue-100;
+                }
+                button{
+                    margin-bottom: $mg-2 - 5px;
+                }
+            }
+            .function_item:hover{
+                animation: moveUpDown;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
     @media screen and (max-width: 1500px) {
         .carousel-inner {
             .carousel-item {
@@ -258,11 +299,21 @@
     @media screen and (max-width: 576px) {
         h1 {
             font-size: $fs-4 - 3rem;
-           
         }
         .carousel-indicators-config {
             li {
                 font-size: $fs-1 - 0.5rem;
+            }
+        }
+    }
+    @media screen and (min-width:768.1px) and (max-width:992px) {
+        #vehicle-function{
+            .intro-container{
+                div:nth-child(3), div:nth-child(4){
+                    .function_item{
+                        margin-top: $mg-2;
+                    }
+                }
             }
         }
     }
@@ -282,6 +333,17 @@
         }
         100% {
             height: 307px;
+        }
+    }
+    @keyframes moveUpDown {
+        0%{
+            transform: translateY(-5px);
+        }
+        50%{
+            transform: translateY(-20px);
+        }
+        100%{
+            transform: translateY(-5px);
         }
     }
 }

@@ -20,3 +20,11 @@
         }
     }
 }
+@each $stt,$img in (1, item-1) (2, item-2) (3, item-3) (4, item-4){
+    .function-item-#{$stt}{
+        background: url(../../img/#{$img}.jpg);
+        background-size: 120%;
+        background-position: center 1rem;
+        background-repeat: no-repeat;
+    }
+}
