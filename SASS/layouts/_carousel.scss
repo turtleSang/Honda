@@ -1,0 +1,58 @@
+#swiper_slider{
+    margin-top: 48px;
+    background-color: $color-dark-blue-200;
+    height: 800px;
+    .swiper {
+        width: 100%;
+        height: 80%;
+        .swiper-wrapper{
+            width: 100%;
+            height: 95%;
+        }
+    }
+    .swiper-pagination{
+        bottom: 0;
+        .swiper-pagination-bullet{
+            width: 12px;
+            height: 12px;
+            background-color: $color-blue-100;
+            opacity: 0.6;
+            &.swiper-pagination-bullet-active{
+                background-color: $color-orange-100;
+            }
+        }
+    }
+    .swiper-button-prev{
+        left: -0.9rem;
+        top: 45%;
+        background-color: $color-white;
+        padding: 40px 30px;
+        border-radius: 0.9rem;
+    }
+    .swiper-button-next{
+        top: 45%;
+        right: -0.9rem;
+        background-color: $color-white;
+        padding: 40px 30px;
+        border-radius: 0.9rem;
+    }
+    .swiper-button-explore{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        z-index: 2;
+    }
+    @media screen and (max-width: 1200px) {
+        height: 500px;
+    }
+    @media screen and (max-width:992px) {
+        height: 400px;
+    }
+    @media screen and (max-width:768px) {
+        height: 800px;
+    }
+}
+
+
+

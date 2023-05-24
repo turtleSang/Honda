@@ -1,0 +1,22 @@
+@each $stt,$bg-color in (1,#3C4C5C) (2,#5E5E5E) (3, #14409A) (4, #5C5c5c) (5, #C1787D) (6, #33569C){
+    #img-#{$stt}{
+        background: linear-gradient(to top,#F6F6F6 , #F6F6F6, #b8b0b0);
+    }
+    .vehicle_product:hover{
+        #img-#{$stt}{
+            background: linear-gradient(to top,#F6F6F6 , #F6F6F6, $bg-color);
+        }
+    }
+}
+@each $stt,$img in (1, banner-1) (2, banner-2) (3, banner-3) (4, banner-4) {
+    #swiper_slider{
+        .slider-#{$stt}{
+            background-image: url(../../img/#{$img}.jpg);
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 768px) {
+                background-image: url(../../img/#{$img}-xs.jpg);
+            }
+        }
+    }
+}

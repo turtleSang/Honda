@@ -1,0 +1,26 @@
+.btn-vehicle{
+    @include button($color-blue-100, $color-blue-100, $color-white,$pd-1, $pd-5 , $color-white, $color-blue-100, $color-blue-100);
+    font-size: $fs-1;
+}
+.btn-vehicle-active{
+    @include button($color-blue-100, $color-white, $color-blue-100,$pd-1, $pd-5 , $color-blue-100, $color-white, $color-blue-100);
+    font-size: $fs-1;
+}
+.btn-search{
+    @include button($color-blue-100, transparent, $color-blue-100,$pd-1, $pd-5 , $color-blue-100, $color-white, $color-blue-100);
+}
+.btn-carousel{
+    font-size: $fs-1;
+    @include button($color-orange-100, $color-orange-100, $color-white,$pd-1, $pd-2, $color-white, $color-orange-100 , $color-orange-100);
+}
+.btn-go{
+    font-size: 1.4rem;
+    @include button($color-blue-100, $color-blue-100, $color-white, $pd-1, $pd-5, transparent, $color-blue-200, $color-blue-100)
+}
+.btn-build{
+    font-size: 1.4rem;
+    @include button($color-white, transparent, $color-white, $pd-1, $pd-5, $color-blue-100, $color-white, $color-blue-100);
+}
+.btn-caption{
+    padding: $pd-1 $pd-5;
+}

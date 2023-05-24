@@ -1,0 +1,89 @@
+header {
+    background-color: $color-blue-100;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // a {
+    //     color: $color-white;
+    //     text-decoration: none;
+    //     padding: 0 $pd-4;
+    // }
+    .myNavBar {
+        padding: 0;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        .header_left {
+            .nav_left {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                .nav_left_item {
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    border-right: $border-1;
+                    transition: 0.5s;
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                        padding: 0 $pd-4;
+                    }
+                    &:hover {
+                        background-color: $color-white;
+                        a {
+                            color: $color-blue-100;
+                        }
+                    }
+                    &.active {
+                        background-color: $color-white;
+                        a {
+                            color: $color-blue-100;
+                        }
+                    }
+                }
+            }
+        }
+        .header_right {
+            display: flex;
+            align-items: center;
+            & > a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: $color-white;
+                text-decoration: none;
+                padding: 0 $pd-4;
+            }
+            #myNavRight {
+                .navbar-nav {
+                    height: 48px;
+                    .nav-item {
+                        display: flex;
+                        align-items: center;
+                        transition: 0.5s;
+                        .nav-link {
+                            padding: 0 25px;
+                            font-size: 1.2rem;
+                            color: $color-white;
+                            text-decoration: none;
+                            padding: 0 $pd-4;
+                        }
+                        &.acive{
+                            background-color: $color-blue-200;
+                        }
+                        &:hover{
+                            background-color: $color-blue-200;
+                        }
+                    }
+                    .nav-item:nth-child(3) {
+                        border-left: $border-1;
+                        border-right: $border-1;
+                    }
+                }
+            }
+        }
+    }
+}

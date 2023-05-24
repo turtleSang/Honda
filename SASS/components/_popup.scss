@@ -1,0 +1,76 @@
+#discovers {
+    position: relative;
+    .dropdown_popup {
+        position: absolute;
+        right: 0px;
+        bottom: -270px;
+        background-color: $color-gray;
+        box-shadow: 1px 2px 9px 1px $color-gray-1;
+        padding: 15px;
+        width: 400px;
+        display: none;
+        z-index: 10;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            color: $color-blue-100;
+            margin-bottom: $mg-1;
+        }
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .popup_social {
+            margin: $mg-2 0;
+            display: flex;
+            justify-content: space-around;
+            a {
+                display: inline-block;
+                background-color: $color-blue-100;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                color: $color-white;
+                text-align: center;
+                line-height: 25px;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-bottom: 15px solid $color-gray;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            top: -15px;
+            right: 10px;
+        }
+    }
+}
+@keyframes showPopUp {
+    0%{
+        opacity: 0;
+        transform: translate(0, -10%) scaleY(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0) scaleY(1);
+    }
+}
+@keyframes hidePopUp{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+

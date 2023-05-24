@@ -1,0 +1,76 @@
+#intro{
+    padding-top: $pd-3;
+    background: linear-gradient(to Bottom, #00324F 50%, white 50%);
+    .intro-container{
+        padding: 0 $pd-7;
+        .intro_left, .intro_right{
+            height: 350px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-color: $color-black;
+            background-clip: content-box;
+        }
+        .intro_left{            
+            background-image: url("../../img/our-vehicle-intro-1.jpg");            
+            .intro_left_content{
+                color: white;
+                text-align: center;
+                position: absolute;
+                bottom: 20%;
+                font-size: $fs-1;
+                h4{
+                    font-weight: bold;
+                    margin-bottom: $mg-2;
+                }
+                p{
+                    font-weight: $fw-300;
+                }
+            }
+
+        }
+        .intro_right{
+            background-image: url("../../img/our-vehicles-intro-2.jpg");
+            .intro_right_contnent{
+                color: white;
+                position: absolute;
+                top: 60%;
+                left: 5%;
+                font-size: $fs-2;
+                width: 40%;
+                transform: translateY(-50%);
+                h4{
+                    font-weight: bold;
+                    display: inline-block;
+                    background-color: $color-dark-blue-200;
+                    padding: $pd-1 $pd-2;
+                }
+
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .intro-container{
+            .intro_left{
+                .intro_left_content{
+                    font-size: $fs-2 -0.6rem;
+                    padding: 0 20px;
+                }
+            }
+            .intro_right{
+                background-image: url("../../img/intro-2-xs.jpg");
+                .intro_right_contnent{
+                    width: 100%;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        .intro-container{
+            .intro_right{
+                margin-top: $mg-1;
+            }
+        }
+    }
+}
