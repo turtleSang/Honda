@@ -126,6 +126,26 @@
   background-image: url("../../img/intro-4.jpg");
 }
 
+.discover_item:nth-child(1) {
+  background-image: url(../../img/discover-1.jpg);
+}
+
+.discover_item:nth-child(2) {
+  background-image: url(../../img/discover-2.jpg);
+}
+
+.discover_item:nth-child(3) {
+  background-image: url(../../img/discover-3.jpg);
+}
+
+.discover_item:nth-child(4) {
+  background-image: url(../../img/discover-4.jpg);
+}
+
+.discover_item:nth-child(5) {
+  background-image: url(../../img/discover-5.jpg);
+}
+
 html {
   font-size: 12px;
 }
@@ -462,6 +482,152 @@ header .myNavBar .header_right #myNavRight .navbar-nav .nav-item:nth-child(3) {
 @media screen and (max-width: 768px) {
   #intro .intro-container .intro_right {
     margin-top: 20px;
+  }
+}
+
+#discover {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+#discover .discover_title {
+  text-align: center;
+  color: #082b42;
+  margin-bottom: 20px;
+}
+#discover .discover_title h1 {
+  font-size: 6rem;
+  font-weight: 300;
+}
+#discover .discover_title p {
+  font-size: 1.4rem;
+  word-spacing: 2px;
+}
+#discover .discover_content {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+#discover .discover_content .discover_item {
+  height: 464px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+}
+#discover .discover_content .discover_item .discover_text {
+  width: 90%;
+  margin: 0 auto;
+}
+#discover .discover_content .discover_item .discover_text h2,
+#discover .discover_content .discover_item .discover_text p {
+  margin-bottom: 20px;
+}
+#discover .discover_content .discover_item .discover_text h2 {
+  font-size: 1.8rem;
+  color: #00446b;
+}
+#discover .discover_content .discover_item .discover_text p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #082b42;
+}
+#discover .discover_content .discover_item .discover_text .discover_link {
+  margin: 20px 0;
+  padding: 15px 0;
+}
+#discover .discover_content .discover_item .discover_text .discover_link a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #007cc3;
+  transition: 0.5s;
+}
+#discover .discover_content .discover_item .discover_text .discover_link a:hover {
+  color: #082b42;
+}
+#discover .discover_content .discover_item:last-child {
+  justify-content: center;
+  text-align: start;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+}
+#discover .discover_content .discover_item:last-child > i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 1.8rem;
+  color: #2198dc;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor {
+  display: flex;
+  align-items: center;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor img {
+  height: 4rem;
+  border-radius: 5px;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor .twitter_name {
+  margin-left: 20px;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor .twitter_name p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor .twitter_name p a {
+  text-decoration: none;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_infor .twitter_name p:first-child {
+  font-weight: bold;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_content {
+  margin-top: 20px;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_content .status {
+  font-size: 1.4rem;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_content .status a {
+  text-decoration: none;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_content .date {
+  color: #007bff;
+}
+#discover .discover_content .discover_item:last-child .twitter_status .twitter_content .share a {
+  text-decoration: none;
+  transition: 0.5s;
+  margin-right: 5px;
+}
+#discover .discover_button {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 1300px) {
+  #discover .discover_content .discover_item .discover_text p {
+    margin: 0;
+  }
+  #discover .discover_content .discover_item .discover_text .discover_link {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  #discover .discover_content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 568px) {
+  #discover .discover_title h1 {
+    font-size: 4rem;
+  }
+  #discover .discover_title p {
+    font-size: 1.2rem;
+  }
+  #discover .discover_content {
+    grid-template-columns: 1fr;
   }
 }
 

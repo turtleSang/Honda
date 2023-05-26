@@ -1,0 +1,158 @@
+#discover {
+    background-color: $color-gray-2;
+    padding: $pd-6 0;
+    .discover_title {
+        text-align: center;
+        color: $color-dark-blue-300;
+        margin-bottom: $mg-1;
+        h1 {
+            font-size: $fs-4;
+            font-weight: 300;
+        }
+        p {
+            font-size: 1.4rem;
+            word-spacing: 2px;
+        }
+    }
+    .discover_content {
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        .discover_item {
+            height: 464px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            text-align: center;
+            .discover_text {
+                width: 90%;
+                margin: 0 auto;
+                h2,
+                p {
+                    margin-bottom: $mg-1;
+                }
+                h2 {
+                    font-size: $fs-2;
+                    color: $color-dark-blue-100;
+                }
+                p {
+                    margin-bottom: 20px;
+                    font-size: 1.2rem;
+                    color: $color-dark-blue-300;
+                }
+                .discover_link {
+                    margin: $mg-1 0;
+                    padding: $pd-2 0;
+                    a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: $fs-1;
+                        color: $color-blue-100;
+                        transition: 0.5s;
+                        &:hover {
+                            color: $color-dark-blue-300;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                justify-content: center;
+                text-align: start;
+                padding: $pd-2;
+                background-color: $color-white;
+                position: relative;
+                & > i {
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    font-size: $fs-2;
+                    color: $color-blue-200;
+                }
+                .twitter_status{
+                    .twitter_infor{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            height: 4rem;
+                            border-radius: 5px;
+                        }
+                        .twitter_name{
+                            margin-left: $mg-1;
+                            p{
+                                margin: 0;
+                                font-size: $fs-1;
+                                a{
+                                    text-decoration: none;
+                                }
+                            }
+                            p:first-child{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .twitter_content{
+                        margin-top: 20px;
+                        .status{
+                            font-size: $fs-1;
+                            a{
+                                text-decoration: none;
+                            }
+                        }
+                        .date{
+                            color: #007bff;
+                        }
+                        .share{
+                            a{
+                                text-decoration: none;
+                                transition: 0.5s;
+                                margin-right: $mg-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .discover_button{
+        text-align: center;
+        margin-top: $mg-3 - 5px;
+    }
+    @media screen and (max-width:1300px) {
+        .discover_content{
+            .discover_item{
+                .discover_text{
+                    p{
+                        margin: 0;
+                    }
+                    .discover_link{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:992px) {
+        .discover_content{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media screen and (max-width:568px) {
+        .discover_title{
+            h1{
+                font-size: $fs-4 - 2rem;
+            }
+            p{
+                font-size: $fs-1 - 0.2rem;
+            }
+        }
+        .discover_content{
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
