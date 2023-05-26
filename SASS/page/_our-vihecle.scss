@@ -200,6 +200,37 @@
             }
         }
     }
+    .our_vehicle_footer{
+        padding: $pd-5;
+        .our_vehicle_footer_content{
+            height: 370px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            color: white;
+            .vehicle_footer_container{
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                h3{
+                    margin-bottom: $mg-1;
+                }
+                p{
+                    margin-bottom: $mg-1;
+                    font-size: $fs-1 - 0.2rem;
+                }
+                .btn-footer{
+                    margin-bottom: $mg-1;
+                    button{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
     @media screen and (max-width: 1500px) {
         .carousel-inner {
             .carousel-item {
@@ -294,6 +325,11 @@
         }
         .carousel_footer {
             width: 100%;
+        }
+        .our_vehicle_footer{
+            .intro-1{
+                margin-bottom: $mg-1;
+            }
         }
     }
     @media screen and (max-width: 576px) {
