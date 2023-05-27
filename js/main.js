@@ -145,7 +145,7 @@ document.querySelector(".carousel-control-prev").onclick = () => {
     addClassActive(preIndex);
 }
 
-document.querySelector(".carousel-control-next").onclick = ()=>{
+document.querySelector(".carousel-control-next").onclick = () => {
     let index = getIndex();
     let nextIndex = findNextIndex(index);
     addClassActive(nextIndex);
@@ -162,7 +162,7 @@ function findPreIndex(num) {
         return num - 1;
     }
 }
-function findNextIndex(num){
+function findNextIndex(num) {
     if (Number(num) === 4) {
         return 0;
     } else {
@@ -176,4 +176,32 @@ function addClassActive(index) {
     }
     listLi[index].classList.add("active");
     document.getElementById("type-chossen").innerHTML = listLi[index].innerHTML;
+}
+
+let listfooter = document.getElementsByClassName("footer_top_item");
+for (const footerItem of listfooter) {
+    let buttonActive = footerItem.querySelector(".sm-title");
+    buttonActive.onclick = () => {
+        let ul = footerItem.getElementsByTagName("ul")[0];
+        if (ul.className === "active") {
+            removeActive();
+        } else {
+            removeActive();            
+            ul.classList.add("active");
+            ul.style.animation = "showUl 0.5s linear"
+
+        }
+    }
+}
+function removeActive() {
+    for (const item of listfooter) {
+        let ulClass = item.querySelector("ul");
+        if (ulClass.className === "active") {
+            ulClass.style.animation = "hideUl 0.5s linear"
+            setTimeout(() => {
+                ulClass.classList.remove("active");
+            }, 500.1);
+            
+        }
+    }
 }
