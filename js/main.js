@@ -205,3 +205,8 @@ function removeActive() {
         }
     }
 }
+window.onscroll = ()=>{
+    let section = document.getElementById("intro");
+    let position = section.getBoundingClientRect();
+    console.log(position);
+}
