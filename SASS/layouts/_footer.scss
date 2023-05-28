@@ -1,0 +1,140 @@
+footer {
+    background-color: $color-gray-2;
+    padding: $pd-6 0;
+    .footer_top {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .footer_top_item {
+            h4:first-child {
+                display: block;
+                font-weight: bold;
+                font-size: $fs-2;
+                color: $color-dark-blue-100;
+            }
+            h4:nth-child(2) {
+                display: none;
+            }
+            ul {
+                margin-top: $mg-2;
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-bottom: $mg-1;
+                    a {
+                        font-size: $fs-1;
+                        text-decoration: none;
+                        color: $color-blue-200;
+                    }
+                }
+            }
+        }
+    }
+    .footer_touch {
+        border-top: 1px solid $color-gray-1;
+        width: 90%;
+        margin: $mg-3 auto auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: $pd-5;
+        .touch_left {
+            h3 {
+                font-weight: bold;
+                margin-bottom: $mg-1;
+                color: $color-dark-blue-200;
+            }
+            .icons_footer {
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    background-color: #007cc3;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 30px;
+                    margin-right: $mg-1;
+                }
+            }
+        }
+        .touch_right {
+            text-align: end;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .footer_top {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .footer_top {
+            grid-template-columns: 1fr;
+            .footer_top_item {
+                h4:first-child {
+                    display: none;
+                }
+                h4:nth-child(2) {
+                    display: block;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    border: 1px solid $color-dark-blue-100;
+                    padding: $pd-2 $pd-3;
+                    border-radius: 10px;
+                    background-color: white;
+                    color: $color-blue-100;
+                    i{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 1px solid $color-dark-blue-100;
+                        text-align: center;
+                        line-height: 29px;
+                    }
+                    
+                }
+                ul {
+                    display: none;
+                    width: 96%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0;
+                    padding: 10px;
+                    height: 408px;
+                    border-radius: 0 0 20px 20px;
+                    background-color: $color-white;
+                    li{
+                        margin: 0;
+                        padding: $pd-2;
+                        border-bottom: 1px solid $color-gray-2;
+                        &:last-child{
+                            border: none;
+                        }
+                    }
+                    &.active{
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+@keyframes showUl{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 408px;
+    }
+}
+@keyframes hideUl{
+    0%{
+        height: 408px;
+    }
+    100%{
+        height: 0px;
+    }
+}
