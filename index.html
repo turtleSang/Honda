@@ -24,8 +24,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <!-- Animated -->
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/main.css" />
     <title>Honda</title>
@@ -469,7 +475,7 @@
     <section id="intro">
       <div class="intro-container container-fluid">
         <div class="row">
-          <div class="col-12 col-md-6 intro_left">
+          <div class="col-12 col-md-6 intro_left wow animate__animated animate__bounceInLeft">
             <div class="intro_left_content">
               <h4>Future Vehicle</h4>
               <p>
@@ -481,8 +487,8 @@
               <button class="btn btn-go">Go</button>
             </div>
           </div>
-          <div class="col-12 col-md-6 intro_right">
-            <div class="intro_right_contnent">
+          <div class="col-12 col-md-6 intro_right wow animate__animated  animate__bounceInRight">
+            <div class="intro_right_contnent ">
               <h4>BUILD & PRICE</h4>
               <p>Personalize a 2018 ACCORD SEDAN to make it your own</p>
               <button class="btn btn-build">Build My Vehicle</button>
@@ -741,7 +747,7 @@
         </div>
       </div>
       <div class="container-fluid intro" id="vehicle-function">
-        <div class="intro-container row">
+        <div class="intro-container row  wow animate__animated animate__fadeInLeft">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="function_item function-item-1">
               <h3>BUILD & PRICE</h3>
@@ -774,7 +780,7 @@
       </div>
       <div class="our_vehicle_footer container-fluid">
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 wow animate__animated animate__bounceInLeft">
             <div class="our_vehicle_footer_content intro-1">
               <div class="vehicle_footer_container">
                 <h3>Nearly New. Filly Certified</h3>
@@ -789,7 +795,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 wow animate__animated animate__bounceInRight">
             <div class="our_vehicle_footer_content intro-2">
               <div class="vehicle_footer_container">
                 <h3>How-To Videos and Guides</h3>
@@ -1114,6 +1120,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js";
 
@@ -1140,7 +1147,11 @@
         },
       });
     </script>
-
+    <!-- WOW JS -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- Main Js -->
     <script src="./js/main.js"></script>
   </body>
