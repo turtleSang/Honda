@@ -215,6 +215,9 @@ header .myNavBar .header_right {
   display: flex;
   align-items: center;
 }
+header .myNavBar .header_right .navbar-toggler {
+  color: white;
+}
 header .myNavBar .header_right > a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -246,6 +249,26 @@ header .myNavBar .header_right #myNavRight .navbar-nav .nav-item:hover {
 header .myNavBar .header_right #myNavRight .navbar-nav .nav-item:nth-child(3) {
   border-left: 1px solid #4f91ca;
   border-right: 1px solid #4f91ca;
+}
+@media screen and (max-width: 992px) {
+  header .header_right #myNavRight {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+  }
+  header .header_right #myNavRight .navbar-nav .nav-item {
+    background-color: #2198dc;
+    padding: 20px;
+    border-bottom: 2px solid #00446b;
+  }
+  header .header_right #myNavRight .navbar-nav .nav-item .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+  header > #search_area, header > #search_footer {
+    transform: translateY(250px);
+  }
 }
 
 .container--config {
@@ -915,6 +938,12 @@ footer .footer_touch .touch_right {
   border-left: 15px solid transparent;
   top: -15px;
   right: 10px;
+}
+@media screen and (max-width: 992px) {
+  #discovers .dropdown_popup {
+    width: 100%;
+    bottom: -248px;
+  }
 }
 
 @keyframes showPopUp {

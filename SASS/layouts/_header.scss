@@ -50,6 +50,9 @@ header {
         .header_right {
             display: flex;
             align-items: center;
+            .navbar-toggler{
+                color: white;
+            }
             & > a {
                 text-decoration: none;
                 font-size: 1.2rem;
@@ -71,10 +74,10 @@ header {
                             text-decoration: none;
                             padding: 0 $pd-4;
                         }
-                        &.acive{
+                        &.acive {
                             background-color: $color-blue-200;
                         }
-                        &:hover{
+                        &:hover {
                             background-color: $color-blue-200;
                         }
                     }
@@ -84,6 +87,30 @@ header {
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .header_right {
+            #myNavRight {
+                position: absolute;
+                top: 48px;
+                left: 0;
+                width: 100%;
+                .navbar-nav {
+                    .nav-item {
+                        background-color: $color-blue-200;
+                        padding: 20px;
+                        border-bottom: 2px solid $color-dark-blue-100;
+                        .nav-link {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        & > #search_area {
+            transform: translateY(250px);
         }
     }
 }
